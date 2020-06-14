@@ -17,8 +17,7 @@ describe('Transaction', () => {
     await connection.query('DROP TABLE IF EXISTS transactions');
     await connection.query('DROP TABLE IF EXISTS categories');
     await connection.query('DROP TABLE IF EXISTS migrations');
-    const con = await connection.runMigrations();
-    console.log(con);
+    await connection.runMigrations();
   });
 
   beforeEach(async () => {
